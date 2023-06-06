@@ -12,7 +12,7 @@ on:
 jobs:
 
   http-server:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     defaults:
       run:
         working-directory: ./http-server
