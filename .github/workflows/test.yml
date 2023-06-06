@@ -12,7 +12,7 @@ on:
 jobs:
 
   http-server:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./http-server
@@ -34,7 +34,7 @@ jobs:
         run: go tool cover -func=coverage.out | awk 'END {print $NF}'
 
   rpc-server:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./rpc-server
@@ -56,7 +56,7 @@ jobs:
         run: go tool cover -func=coverage.out | awk 'END {print $NF}'
 
   docker-compose:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
